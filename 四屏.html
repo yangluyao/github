@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>resume</title>
+	     <style type="text/css">
+	     	
+		     	*{margin: 0;padding: 0;list-style: none;}
+				html,body{ height: 100%;font-size: 25px;overflow: hidden;}
+				a{display: block;text-decoration: none;}
+				.clear{*zoom:1}
+				.clear:after{content: "";display: block;clear: both;}
+				                /*--------------------头部------------------------*/
+			   
+			    #header >.headmain{width: 1130px;height: 60px;margin: 0 auto;position: relative;background: wheat;} 
+			    #header >.headmain >.name{float: left;margin-top: 15px;}
+			     #header >.headmain >.nav{float: right;}
+			    #header >.headmain >.nav >li{float: left;width: 110px;height: 60px;
+			    							font-size: 16px;text-align: center;line-height: 60px;}
+		        #header >.headmain >.nav >li:hover{background: dodgerblue;}	
+		        .character{display: block;font-size: 12px;color: white;}
+		        .title{display: block;color: white;font: 25px;}
+		        .lab{color: black;font-size: 40px;}
+		        
+		            /*--------------------dot------------------------*/	
+		        #wrap >.dot{position: absolute;right: 5px;top: 400px;}
+		        #wrap >.dot div{width: 10px;height: 10px;border: 4px solid pink;border-radius: 50%;margin-top: 5px;}
+		        #wrap >.dot >li >span{width: 50px;height: 16px;font-size: 10px;border: 1px solid black;background: black;color: white; 
+		                              overflow: hidden;position: absolute;right: 30px;visibility: hidden;}
+		       	
+		        #wrap >.dot >li:hover span{visibility: visible;}	
+		        #wrap >.dot >li.active div{border-color: black;}			
+			    			  /*--------------------内容------------------------*/		
+			    #content{overflow: hidden;}
+			    #content >.list{position: relative;transition: 2s top} 
+			    #content >.list >li{position: relative;}
+			    #content >.list >li >div{ width: 1100px;height: 560px;position:absolute;left: 0;right: 0; bottom: 0;top: 0;margin: auto;overflow: hidden;background: palegreen;}
+				#content >.list >.profile{background: url(img/base.jpg) no-repeat;background-position: 50% 50%;}
+				#content >.list >.work{background: white;}
+				#content >.list >.major{background: deepskyblue;}
+				#content >.list >.iteam{background: url(img/bg1.jpg);}
+				#content >.list >.ego{background: deeppink;}
+				#content >.list >.profile .p1{text-align: center;margin-top: 130px;}
+				#content >.list >.profile .p2 >li{float: left;margin: 35px;width: 200px;text-align: center;}
+				              /*--------------------第二屏------------------------*/	
+				.media{width: 40px;height: 40px;}
+				#content >.list >.major .m1 {position: absolute;left: 5%;top: 3%;}
+				#content >.list >.major .m1 >.list{margin: 20px;}
+				#content >.list >.major .m1 >.list >h1{float: left;}
+				#content >.list >.major .m2{position: absolute;bottom:-26%;right: -21%;}
+				 #content >.list >.major .m2 >.m21{opacity: .6;filter: blur(3px);}
+			    #content >.list >.major .m2 >.m22{position: absolute;right: 250px;bottom: 240px}
+				#content >.list >.major .m2 img{transform: scale(.5);}
+				#content >.list >.major .m3 {position: absolute;left: 5%;top: 50%;width: 100px;height: 100px;animation: 1s shaft linear infinite;}
+				#content >.list >.major .m3 img{transform: scale(.5) translateX(30PX);}
+				@keyframes shaft{
+					0%{transform: rotate(50deg);}
+					25%{transform: rotate(70deg);}
+					50%{transform: rotate(80deg);}
+					75%{transform: rotate(70deg);}
+					100%{transform: rotate(50deg) ;}
+				}
+				
+				#content >.list >.major .m4{position: absolute;bottom:20%;left: 20%;width:600px;height: 100px;perspective: 500px;transform-style: preserve-3d;}
+	            #content >.list >.major .m4 >span{opacity:.1 ; transition: 3s opacity;color: red;}
+	             #content >.list >.major:hover .m4>span{opacity:1 ;  }
+	             
+	                       /*--------------------第三屏------------------------*/	
+	            #content >.list >.work >.sky{width: 100%;height: 100%;background: #007FD5;position: relative;transform: translate3d(0,0,0 );animation: 50s sky_background ease-in-out infinite; }           
+	                @keyframes sky_background{
+	                	0%{background:#007fd5;color: #007FD5;}
+	                	50%{background: #000000;}
+	                	100%{background:#007fd5;color: #007FD5;}
+	                } 
+	             #content >.list >.work >.sky >.cloud_one{position: absolute;left: 0;top: 0;width: 200%; height: 100%; background: url(img/page-4/cloud_one.png);animation: 40s cloud_one linear infinite;}          
+				    @keyframes cloud_one{
+				    	0%{left: 0%;}
+				    	100%{left: -100%;}
+				    }   
+				 #content >.list >.work >.sky >.cloud_two{position: absolute;left: 10%;top: 3%;width: 100%;height: 100%;background: url(img/page-4/cloud_two.png);}   
+	     		 #content >.list >.work >.sky >.cloud_three{position: absolute;left: 10%;top: 3%;width: 200%;height: 300%;background: url(img/page-4/cloud_three.png);animation: 50s cloud_three linear infinite;}
+	     		  @keyframes cloud_three{
+	     		  	from{left: 10%;}
+	     		  	to{left: -100%;}
+	     		  }
+	            #content >.list >.work >div{background: transparent; }
+	            #content >.list >.work .work1{text-align: center;margin-top: 8%;}
+	            #content >.list >.work .work1 >span{color: black;font-size: 20px;text-shadow: red 1px 1px 0;display: block;margin-top: 15px;}
+	            #content >.list >.work .work2{position: absolute;left: 12%;}
+	            #content >.list >.work .work2 li{float: left;width: 200px; overflow: hidden;margin-left: 20px; }
+	            #content >.list >.work .work2 img{height:100px; width: 100px;margin: 0 auto;}
+	             #content >.list >.work .work2 .work21{width: 100px;height: 100px;border: 4px solid red;border-radius: 50%;overflow: hidden;animation: 4s bord linear infinite;margin-left: 23px;}
+	             @keyframes bord{
+	             	0%{border-color: red;}
+	             	50%{border-color: rgba(0,0, 0, 0);}
+	             	100%{border-color: red;}
+	             }
+	             #content >.list >.work .work2 .work22,#content >.list >.work .work2 .work23,#content >.list >.work .work2 .work24{font-size: 15px;}
+	            
+	            
+	                         /*--------------------第三屏------------------------*/	
+	            #content >.list >.iteam .iteam1 >ul{width: 100%;height: 100%;position: relative;} 
+	                         
+	            #content >.list >.iteam .iteam1 >ul >li{float: left; width: 250px;height: 250px;background: gray;margin: 12px;overflow: hidden;position: relative;transition: 2s transform;}   
+	            #content >.list >.iteam .iteam1 >ul >li >.face{position: absolute; background: black;color: white;width: 100%;height: 100%;opacity: 0;transition: 2s opacity;}
+	            #content >.list >.iteam .iteam1 >ul >li >.face >.sp1{position: absolute; font-size: 25px;left: 25%;top: 20%;}    
+	            #content >.list >.iteam .iteam1 >ul >li >.face >.sp2{position: absolute; font-size: 15px;left: 24%;top: 40%;}  
+	            #content >.list >.iteam .iteam1 >ul >li >.pic img{width: 250px;}  
+	            #content >.list >.iteam .iteam1 >ul >li:hover .face{opacity: .8;}
+	            #content >.list >.iteam .iteam1 >ul >li:hover {transform: scale(1.2);}
+	            #mycanvas{width: 100px;height: 100px;position: absolute;right: -70px; top: 220px; z-index: 3;}
+	             #canvas{width: 100px;height: 100px;position: absolute;margin-left: 20px; margin-top:220px; z-index: 3;}
+	             #content >.list >.iteam .iteam2 >.team{position: relative; width: 800px;height: 350px;left: 0;right: 0;top: 150px;margin: auto;overflow: hidden;}
+	             #content >.list >.iteam .iteam2 >.team img{width: 800px;height: 350px;}      
+	             #content >.list >.iteam .iteam2 >.team >ul{position: absolute;width: 300px;height: 100%; right: 0px;top:0px;}          
+	             #content >.list >.iteam .iteam2 >.team >ul >li{width: 300px;height: 50px;margin-left: 85px;margin-top: 10px; background:rgba(0,0,0,.7) ; border: 1px solid black;border-radius: 10px;color: white;transition: 500ms margin-left,2s opacity}     
+	             #content >.list >.iteam .iteam2 >.team .team1{position: absolute;left: 10px;top: 60px;color: white;font-size: 35px;font-weight: bold;}  
+	             #content >.list >.iteam .iteam2 >.team .team2{position: absolute;left: 0px;bottom: 0px; width:450px;height:60px;font-size: 15px;color: white; background: rgba(0,0,0,.5);border-radius: 5px;}  
+	       			         /*-----------------------end------------------------*/	
+	       			         
+	       			         
+	       			         
+	       			       
+	     </style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<div class="headmain">
+				   <div class="name">
+					 <a href="javascript:;">li chen</a>
+				   </div>
+				   <ul class="nav clear">
+					  <li><a href="javascript:;">基本资料</a></li>
+					  <li><a href="javascript:;">专业技能</a></li>
+					  <li><a href="javascript:;">工作经验</a></li>
+					  <li><a href="javascript:;">项目经历</a></li>
+					  <li><a href="javascript:;">自我评价</a></li>
+				   </ul>
+				</div>
+			</div>
+			<div id="content">
+				<ul class="list">
+					<li class="profile">
+						<div>
+							<h1 class="p1">基本资料</h1>
+							<ul class="p2">
+								<li>
+									<img src="img/page-2/glass.png"/>
+									<p class="title">基本信息</p>
+									<span class="character">姓名：杨路遥 女</span>
+									<span class="character">年龄：23 籍贯:安徽</span>
+								</li>
+								<li>
+									<img src="img/page-2/hat.png"/>
+									<p class="title">毕业院校</p>
+									<span class="character">安徽大学江淮学院</span>
+								</li>
+								<li>
+									<img src="img/page-2/book.png"/>
+									<p class="title">学历和专业</p>
+									<span class="character">本科 软件工程</span>
+								</li>
+								<li>
+									<img src="img/page-2/tel.png"/>
+									<p class="title">联系方式</p>
+									<span class="character">邮箱：2576443567@qq.com</span>
+									<span class="character">Telephone:17730220304</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="major">
+						<div>
+							<div class="m1">
+								<div class="list">
+									<h1><img class="media" src="img/page-3/tv8.png"/></h1>
+									<span>PC端</span><br />
+									<p class="character"> 
+										 熟练使用 Html5 Css3 JavaScript，能够合理完成web端或者移动端页面的编写和维护，<br />
+									         思路清晰，结构完整，易于维护和持久化开发，能处理主流浏览器兼容问题。<br /> 
+									         熟练使用原生js,了解js面向对象原理，闭包以及原型结构，能够合理利用面向对象以及模块化开发,并且能适当完成框架封装。熟练使用 jQuery，并能完成相关项目。<br />
+									          熟悉animation fullpage jquery-ui template lazyload jQeasing masonry等实用插件的应用,轮播图，tab栏，瀑布流，延迟加载，全屏滚动等等常用功能的实现         
+									</p>
+									
+								</div>
+								<div class="list">
+									<h1 ><img class="media" src="img/page-3/apple6.png" /></h1>
+									<span>手机端</span><br />
+									<p class="character">
+										熟练使用zepto.js，Frozen ui，Amaze ui等移动框架进行移动页面的开发<br />
+                                    	掌握 移动端编程，会基于流式布局以及 响应式布局 开发基于移动端的页面。<br />                       
+									</p>
+								</div>
+								<div class="list">
+									<h1><img class="media" src="img/page-3/baterry10.png" /></h1>
+									<span>其他</span><br />
+									<p class="character">
+										掌握angularJS 框架原理，可以完成无需刷新的单页面应用<br />
+										了解Node.js 的工作原理会使用npm、bower环境
+									</p>
+								</div>
+							</div>
+							<div class="m2">
+								<div class="m21"><img src="img/page-3/1(4).png"></div>
+								<div class="m22"><img src="img/page-3/2(3).png"/> </div>
+							</div>
+							<div class="m3"><img src="img/page-3/5(2).png"></div>
+							<div class="m4">
+							<span class="lab">HTML</span>
+							<span>Node.s</span>
+							<span>Bootstrap</span>
+							<span>Jquery</span>
+							<span>Canavas</span>
+							<span class="lab">CSS3</span>
+							<span>Angular</span>
+							<span>Zepto</span>
+							<span>响应式</span>
+							<span>移动端</span>
+									
+							</div>
+						</div>
+					</li>
+ 					<li class="work">
+						<section class="sky">
+							<div class="cloud_one"></div>
+							<div class="cloud_two"></div>
+							<div class="cloud_three"></div>
+						</section>
+						<div>
+							<div class="work1">
+								<h1>个人经历</h1>
+								<span>热爱技术，专注用户体验</span><br />
+							</div>
+							<div class="work2">
+								<ul>
+									<li>
+										<div class="work21"><img src="img/page-4/anjie.jpg"/></div>
+										<span class="work22">河北联合大学轻工学院</span><br />
+										<span class="work23">信息科学与技术</span><br />
+										<span class="work24">主要学习编程语言，信息驱动及开发</span><br/>
+									</li>
+									<li>
+										<div class="work21"><img src="img/page-4/dayang.jpg" /></div>
+										<span class="work22">北京中科大洋信息</span><br/>
+										<span class="work23">WEB前端开发</span><br/>
+										<span class="work24">媒体系统和新媒体系统以及全媒体web页面的开发</span><br/>
+									</li>
+									<li>
+										<div class="work21"><img src="img/page-4/lingyang.jpg"/></div>
+										<span class="work22">凌阳开普</span><br/>
+										<span class="work23">嵌入式开发</span><br/>
+										<span class="work24">Linux编程语言，数据结构，网络开发</span><br/>
+									</li>
+									<li>
+										<div class="work21"><img src="img/page-4/school.jpg"/></div>
+										<span class="work22">北京安杰信息科技</span><br/>
+										<span class="work23">前端工程师</span><br/>
+										<span class="work24">互联网电商行业的网站开发，移动端开发</span><br/>
+									</li>
+								</ul>	
+							</div>
+	
+						</div>
+					</li>
+					<li class="iteam">
+						<div>
+							<section class="iteam1">
+								<div ><a href="#"><canvas id="mycanvas"></canvas></a></div>
+								<ul>
+				                   <li>
+				                   	<div class="face"><span class="sp1">智能家居</span><br /><span class="sp2">技术：Html+CSS+Jquery</span></div>
+				                   	<div class="pic"><img src="img/01.jpg" /></div>
+				                   </li>
+				                    <li>
+				                   	<div class="face"><span class="sp1">安杰</span><br/><span class="sp2">技术：Html+CSS+Jquery</span></div>
+				                   	<div class="pic"><img src="img/02.jpg" /></div>
+				                   </li>
+				                    <li>
+				                   	<div class="face"><span class="sp1">金融圈</span><br/><span class="sp2">技术：Html+CSS+Jquery</span> </div>
+				                   	<div class="pic"><img src="img/03.jpg" /></div>
+				                   </li>
+				                    <li>
+				                   	<div class="face"><span class="sp1">电商活动页面</span><br/><span class="sp2">技术：Html+CSS+Jquery</span> </div>
+				                   	<div class="pic"><img src="img/04.jpg" /></div>
+				                   </li>
+				                    <li>
+				                   	<div class="face"><span class="sp1">装饰用</span><br/><span class="sp2">技术：Html+CSS+Jquery</span> </div>
+				                   	<div class="pic"><img src="img/05.jpg" /> </div>
+				                   </li>
+				                    <li>
+				                   	<div class="face"><span class="sp1">装饰用</span><br/><span class="sp2">技术：Html+CSS+Jquery</span> </div>
+				                   	<div class="pic"><img src="img/06.jpg" /></div>
+				                   </li>
+				                    <li>
+				                   	<div class="face"><span class="sp1">个人博客</span><br/><span class="sp2">技术：Html+CSS+Jquery</span> </div>
+				                   	<div class="pic"><img src="img/07.jpg" /></div>
+				                   </li>
+				                    <li>
+				                   	<div class="face"> <span class="sp1"> <a href="javascript:">软装大师 </a></span><br/><span class="sp2">技术：Html+CSS+Jquery</span> </div>
+				                   	<div class="pic"><img src="img/08.jpg" /></div>
+				                   </li>
+				      
+								</ul>
+							</section>
+							<section class="iteam2">
+								<canvas id="canvas"></canvas>
+								<div class="team">
+									<div>
+										<img src="img/1.jpg" />
+										<span class="team1">flappy bird</span>
+										<span class="team2">you are charmming doyou </span>
+									</div>
+									<div>
+										<img src="img/2.jpg" />
+										<span class="team1">cart</span>
+										<span class="team2"> charmming doyou </span>
+									</div>
+									<div>
+										<img src="img/3.jpg" />
+									    <span class="team1">fall</span>
+										<span class="team2">you are doyou </span>
+									</div>
+									<div>
+										<img src="img/4.jpg" />
+									    <span class="team1">view</span>
+										<span class="team2">you are charmming doyou </span>
+									</div>
+									<div>
+										<img src="img/5.jpg" />
+										<span class="team1">fullpage</span>
+										<span class="team2">doyouhave the tine </span>
+									</div>
+									<ul>
+									<li>flappy bird</li> <li>cart</li> <li>fall</li> <li>view</li> <li>full page</li>
+								   </ul>
+							
+								</div>
+								
+								
+							</section>
+						</div>
+					</li>
+					<li class="ego"><div>5</div></li>
+				</ul>
+			</div>
+		    <ul class="dot">
+		    	<li class="active">
+		    		<span>基本资料</span>
+		    		<div></div>
+		    	</li>
+	    		<li>
+	    			<span>专业技能</span>
+	    			<div></div>
+	    		</li>
+    			<li>
+    				<span>工作经验</span>
+    				<div></div>
+    			</li>
+				<li>
+					<span>项目经历</span>
+					<div></div>
+				</li>
+				<li>
+					<span>自我评价</span>
+					<div></div>
+				</li>
+		    </ul>
+		</div>
+	</body>
+    <script type="text/javascript">
+    window.onload=function(){
+	
+	var navlists=document.querySelectorAll("#header >.headmain >ul >li");
+	var hnode=document.querySelector("#header");
+	var cnode=document.querySelector("#content");
+	var cul=document.querySelector("#content >.list");
+	var clists=document.querySelectorAll("#content >.list >li");
+	var dotlis=document.querySelectorAll("#wrap >.dot >li");
+	
+	var now=0;
+    var spans=document.querySelectorAll("#content >.list >.major .m4 >span");
+    
+    var iteam1=document.querySelector("#content >.list >.iteam .iteam1");
+    var iteam2=document.querySelector("#content >.list >.iteam .iteam2");
+    var linodes=document.querySelectorAll(" #content >.list >.iteam .iteam2 >.team >ul >li");
+    var dnodes=document.querySelectorAll(" #content >.list >.iteam .iteam2 >.team >div");
+    // 第四屏
+    fbind();
+    function fbind(){
+    	for(var i=0;i<linodes.length;i++){
+    		linodes[i].index=i;
+    		
+    		linodes[i].onclick=function(){
+    			for(var i=0;i<linodes.length;i++){
+    				linodes[i].style.marginLeft=85+"px";
+    			    linodes[i].style.background="rgba(0,0,0,.7)";
+    			    dnodes[i].style.display="none";
+    			}
+    			linodes[this.index].style.marginLeft=65+"px";
+    			linodes[this.index].style.background="rgba(0,0,0,1)";
+    			dnodes[this.index].style.display="block";
+    		}
+    		
+    	}
+    }
+    
+   //canvas三角形 
+  
+   var c=document.querySelector("#mycanvas");
+   var con=c.getContext("2d");
+   con.moveTo(0,0);
+   con.lineTo(0,100);
+   con.lineTo(100,50);
+   con.lineTo(0,0);
+   con.fillStyle="#007FD5";
+   con.fill();
+   con.stroke();
+  
+     c.onclick=function(){
+     	iteam1.style.display="none";
+     	iteam2.style.display="block";
+     	
+     }
+   
+    var cx=document.querySelector("#canvas");
+   var cxn=cx.getContext("2d");
+   cxn.moveTo(0,50);
+   cxn.lineTo(100,0);
+   cxn.lineTo(100,100);
+   con.lineTo(0,50);
+   cxn.fillStyle="#007FD5";
+   cxn.fill();
+   cxn.stroke();
+    cx.onclick=function(){
+    	iteam2.style.display="none";
+     	iteam1.style.display="block";
+     
+     }
+  
+ 
+ // 随机数定位置 
+   address();
+   function address(){
+   	for(var i=0;i<spans.length;i++){
+   		spans[i].style.marginLeft=Math.random()*200+"px";
+   		spans[i].style.marginBottom=Math.random()*20+5+"px";
+   	}
+   	
+   }
+
+
+
+
+	//头部绑定
+	hbind();
+	function hbind(){
+		for(var i=0;i<navlists.length;i++){
+			 
+			navlists[i].index=i;
+			navlists[i].onclick=function(){
+				
+				move(this.index);
+				now=this.index;
+													/*TAB切换两种都可以：一种利用top；一种利用display
+													 for(var j=0;j<clists.length;j++){
+											             	clists[j].style.display="none";
+											             }
+													clists[this.index].style.display="block";*/
+			    }	
+		    }
+		
+	    }
+	
+	//右部导航栏
+	dotbind();
+	function dotbind(){
+		for(var i=0;i<dotlis.length;i++){
+			dotlis[i].index=i;
+			dotlis[i].onclick=function(){
+			
+				move(this.index);
+				now=this.index;
+			}
+		}
+	}
+	move(0);
+	//move 函数
+	function move(index){
+		for(var i=0;i<navlists.length;i++){
+			navlists[i].style.background="";
+		}
+		navlists[index].style.background="dodgerblue";
+		cul.style.top=-index*(document.documentElement.clientHeight-hnode.offsetHeight)+"px";
+		
+		
+		for(var i=0;i<dotlis.length;i++){
+			dotlis[i].classList.remove("active");
+		}
+		dotlis[index].classList.add("active");
+	}
+	
+	
+	//滚轮事件
+	if(cnode.addEventListener){
+		cnode.addEventListener("DOMMouseScroll",Scrollfn);
+	
+	}
+	cnode.onmousewheel=Scrollfn;
+	function Scrollfn(ev){
+		ev=ev||event;
+		var dir="";
+		if(ev.wheelDelta){
+			
+			dir=ev.wheelDelta>0? "up":"down";
+			console.log(dir);
+		}
+		else if(ev.detail){
+					dir = ev.wheelDelta>0? "up":"down";
+		}
+	
+		switch(dir){
+			case "up":
+				if(now>0){
+					now--;
+				    move(now);
+				}
+				break;
+			case "down":
+			    if(now<clists.length-1){
+			    	now++;
+			    	move(now);
+			    }
+			    break;
+			
+		}
+	}
+	//内容绑定
+	cbind();
+	function cbind(){
+		
+		cnode.style.height=document.documentElement.clientHeight-hnode.offsetHeight+"px";
+		for(var i=0;i<clists.length;i++){
+			clists[i].style.height=document.documentElement.clientHeight-hnode.offsetHeight+"px";
+		}	
+	}
+}
+    </script>
+</html>
+
